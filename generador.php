@@ -1,6 +1,6 @@
 <?php
 	//obtener longitud de clave
-	$longitud = $_GET['longitud'];
+	$longitud = isset($_GET['longitud']) && !empty($_GET['longitud']) ? intval($_GET['longitud']) : 8;
 
 	//generador
 	function generador($longitud)
